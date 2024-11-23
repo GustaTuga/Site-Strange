@@ -29,7 +29,7 @@
             )
         );
         --header-background-color: #e3e3e3;
-        --highlight-color: #000000;
+        --highlight-color: #ffffff;
         --featured-font-family: "Archivo", sans-serif;
         --character-top-image-src: url("../images/characters/kids-on-the-bike.svg");
         --character-top-image-color: #ffffff;
@@ -47,7 +47,7 @@
             #130404 65%,
             rgba(19, 1, 1,, 0.75 100%)
         );
-        --highlight-color: #ffffff;
+        --highlight-color: #000;
         --featured-font-family: "Rubik Glitch", sans-serif;
         --character-bottom-image-src: url("../images/characters/kids-on-the-bike.svg");
         --character-bottom-image-color: rgba(255, 255, 255, 0.1);
@@ -92,6 +92,15 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     transition: background 1s;
+}
+
+input, textarea {
+    border: 2px solid var(--primary-color-contrast);
+    background-color: var(--field-background-color);
+    color: var(--primary-color-contrast);
+    padding: 8px;
+    margin-bottom: 24px;
+    font-size: 1rem;
 }
 
 /* Estilos para o header */
@@ -225,4 +234,103 @@ section {
     border-image-slice: 10;
 }
 
-/* 7:23 Estilizando as secoes */
+/* Galeria de fotos para Strange Things */
+
+#section-stranger-things-gallery {
+    background-image: var(--background-lamp-image) 120% / 50% no-repeat;
+}
+
+#section-stranger-things-gallery .container {
+    width: 100%;
+}
+
+#section-stranger-things-gallery .container h2 {
+    width: 800px;
+}
+
+#section-stranger-things-gallery .gallery-container {
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+}
+
+#section-stranger-things-gallery .gallery-image {
+    width: 250px;
+    height: 250px;
+    outline: 20px solid var(--highlight-color);
+    border: 3px solid var(--primary-color);
+    box-sizing: initial;
+}
+
+#section-stranger-things-gallery .gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 10px solid var(--highlight-color);
+}
+
+/* Estilizando o Formulário */
+
+#setion-form {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    text-align: center;
+}
+
+#section-form h2 {
+    width: 600px;
+}
+
+#section-form .form-content h3 {
+    color: var(--highlight-color);
+}
+
+#section-form .form-content h3 span {
+    color: var(--primary-color);
+}
+
+#section-form .form-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#section-form .form-content {
+    flex-basis: 50%;
+    position: relative;
+}
+
+#section-form .form-content::after {
+    content: "";
+    background-color: var(--highlight-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: -1;
+}
+
+#section-form .form-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    background-color: var(--primary-color);
+    color: var(--primary-color-contrast);
+    text-align: left;
+}
+
+#section-form .form-container form button {
+    border: none;
+    background-color: var(--field-background-color);
+    color: var(--primary-color-contrast);
+    max-width: 300px;
+    align-self: center;
+}
+
+#section-form .form-container form button:hover {
+    background-color: var(--primary-color-contrast);
+    color: var(--field-background-color);
+}
